@@ -1,0 +1,129 @@
+[
+  {
+    "CdsFCBContext": "{\"FileType\":true,\"ImageExternalStorage\":true}",
+    "EntitySetName": "cr8aa_devicenames",
+    "IsHidden": false,
+    "IsSampleData": false,
+    "IsWritable": true,
+    "LogicalName": "cr8aa_devicename",
+    "Name": "Device Orders",
+    "NativeCDSDataSourceInfoNameMapping": {
+      "_ownerid_value": "Owner",
+      "cr8aa_approvalstatus": "Approval Status",
+      "cr8aa_approveddate": "Approved Date ",
+      "cr8aa_approver": "Approver",
+      "cr8aa_comments": "Comments",
+      "cr8aa_departmentcontribution": "Department Contribution",
+      "cr8aa_departmentcontribution_base": "Department Contribution (Base)",
+      "cr8aa_devicename": "Device Name (cr8aa_devicename)",
+      "cr8aa_devicename_AsyncOperations": "System Jobs",
+      "cr8aa_devicename_BulkDeleteFailures": "Bulk Delete Failures",
+      "cr8aa_devicename_DuplicateBaseRecord": "Duplicate Records (cr8aa_devicename_DuplicateBaseRecord)",
+      "cr8aa_devicename_DuplicateMatchingRecord": "Duplicate Records (cr8aa_devicename_DuplicateMatchingRecord)",
+      "cr8aa_devicename_MailboxTrackingFolders": "Mailbox Auto Tracking Folders",
+      "cr8aa_devicename_PrincipalObjectAttributeAccesses": "Field Sharing",
+      "cr8aa_devicename_ProcessSession": "Process Sessions",
+      "cr8aa_devicename_SyncErrors": "Sync Errors",
+      "cr8aa_devicenameid": "Device Name (cr8aa_devicenameid)",
+      "cr8aa_estimatedshipdate": "Estimated Ship Date",
+      "cr8aa_price": "Price",
+      "cr8aa_price_base": "Price (Base)",
+      "cr8aa_requestdate": "Request Date",
+      "cr8aa_requestedby": "Requested By",
+      "createdby": "Created By",
+      "createdon": "Created On",
+      "createdonbehalfby": "Created By (Delegate)",
+      "exchangerate": "Exchange Rate",
+      "importsequencenumber": "Import Sequence Number",
+      "modifiedby": "Modified By",
+      "modifiedon": "Modified On",
+      "modifiedonbehalfby": "Modified By (Delegate)",
+      "overriddencreatedon": "Record Created On",
+      "owningbusinessunit": "Owning Business Unit",
+      "owningteam": "Owning Team",
+      "owninguser": "Owning User",
+      "statecode": "Status",
+      "statuscode": "Status Reason",
+      "timezoneruleversionnumber": "Time Zone Rule Version Number",
+      "transactioncurrencyid": "Currency",
+      "utcconversiontimezonecode": "UTC Conversion Time Zone Code",
+      "versionnumber": "Version Number"
+    },
+    "PreferredName": "Device Orders",
+    "Type": "NativeCDSDataSourceInfo"
+  },
+  {
+    "DisplayName": "Device Orders (Views)",
+    "Name": "_cr8aa_devicename_views",
+    "RelatedEntityName": "Device Orders",
+    "TrimmedViewName": true,
+    "Type": "ViewInfo",
+    "ViewInfoNameMapping": {
+      "09eccd38-20bc-4014-952e-a284b4569257": "Inactive Device Names",
+      "1c89fd8e-a579-40a7-8ebf-1f4da2c695fb": "Device Name Associated View",
+      "337c6410-844a-4a12-9012-830fdd27cdaf": "Device Name Lookup View",
+      "8b38f4b9-2901-497d-87f2-e6f3edfe9c3b": "Active Device Names",
+      "a1daf5c7-a729-42c5-be87-4850c199cf32": "Device Name Advanced Find View"
+    }
+  },
+  {
+    "DisplayName": "Approval Status (Device Orders)",
+    "Name": "cr8aa_devicename_cr8aa_approvalstatus",
+    "OptionSetInfoNameMapping": {
+      "468450000": "Approve",
+      "468450001": "Reject"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "cr8aa_approvalstatus",
+        "OptionSetReferenceEntityName": "Device Orders"
+      }
+    },
+    "OptionSetTypeKey": "PicklistType",
+    "RelatedColumnInvariantName": "cr8aa_approvalstatus",
+    "RelatedEntityName": "Device Orders",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Status (Device Orders)",
+    "Name": "cr8aa_devicename_statecode",
+    "OptionSetInfoNameMapping": {
+      "0": "Active",
+      "1": "Inactive"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "statecode",
+        "OptionSetReferenceEntityName": "Device Orders"
+      }
+    },
+    "OptionSetTypeKey": "StateType",
+    "RelatedColumnInvariantName": "statecode",
+    "RelatedEntityName": "Device Orders",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Status Reason (Device Orders)",
+    "Name": "cr8aa_devicename_statuscode",
+    "OptionSetInfoNameMapping": {
+      "1": "Active",
+      "2": "Inactive"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "statuscode",
+        "OptionSetReferenceEntityName": "Device Orders"
+      }
+    },
+    "OptionSetTypeKey": "StatusType",
+    "RelatedColumnInvariantName": "statuscode",
+    "RelatedEntityName": "Device Orders",
+    "Type": "OptionSetInfo"
+  }
+]
