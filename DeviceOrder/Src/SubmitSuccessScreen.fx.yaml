@@ -323,7 +323,7 @@ SubmitSuccessScreen As screen:
             DisplayMode: =Parent.DisplayMode
             DisplayName: =DataSourceInfo([@'Device Orders'],DataSourceInfo.DisplayName,"cr8aa_requestdate")
             Fill: =RGBA(0, 0, 0, 0)
-            Height: =50
+            Height: =66
             Required: =false
             Update: =DateValue2.SelectedDate + Time(Value(HourValue2.Selected.Value), Value(MinuteValue2.Selected.Value), 0)
             Width: =993
@@ -337,7 +337,8 @@ SubmitSuccessScreen As screen:
                 Text: =Parent.DisplayName
                 Width: =(Parent.Width - 60) * 0.4
                 Wrap: =false
-                X: =30
+                X: =32
+                Y: =16
                 ZIndex: =1
 
             DateValue2 As datepicker:
@@ -352,7 +353,8 @@ SubmitSuccessScreen As screen:
                 StartYear: =1899
                 Tooltip: =Parent.DisplayName
                 Width: =132
-                X: =DataCardKey15.X + DataCardKey15.Width
+                X: =405
+                Y: =16
                 ZIndex: =2
 
             HourValue2 As dropdown:
@@ -367,7 +369,8 @@ SubmitSuccessScreen As screen:
                 PaddingTop: =5
                 Tooltip: =Parent.DisplayName
                 Width: =DateValue2.Width / 2 - 5
-                X: =492
+                X: =494
+                Y: =16
                 ZIndex: =3
 
             Separator2 As label:
@@ -382,7 +385,8 @@ SubmitSuccessScreen As screen:
                     =":"
                 Width: =10
                 Wrap: =false
-                X: =HourValue2.X + HourValue2.Width
+                X: =555
+                Y: =16
                 ZIndex: =4
 
             MinuteValue2 As dropdown:
@@ -397,7 +401,8 @@ SubmitSuccessScreen As screen:
                 PaddingTop: =5
                 Tooltip: =Parent.DisplayName
                 Width: =HourValue2.Width
-                X: =HourValue2.X + HourValue2.Width + Separator2.Width
+                X: =565
+                Y: =16
                 ZIndex: =5
 
             ErrorMessage12 As label:
@@ -411,8 +416,8 @@ SubmitSuccessScreen As screen:
                 Text: =Parent.Error
                 Visible: =Parent.DisplayMode=DisplayMode.Edit
                 Width: =Parent.Width - 60
-                X: =30
-                Y: =38
+                X: =32
+                Y: =54
                 ZIndex: =6
 
         "'Device Name (cr8aa_devicename)_DataCard2' As typedDataCard.textualEditCard":
