@@ -1,4 +1,5 @@
 "'Compare Screen' As screen":
+    OnVisible: =NewForm(Form1)
 
     "'Compare List Gallery' As gallery.'BrowseLayout_Horizontal_TwoTextOneImageVariant_ver4.0'":
         Height: =704
@@ -199,9 +200,9 @@
 
             DataCardValue3 As text:
                 BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
-                Default: =Parent.Default
+                Default: =User().Email
                 DelayOutput: =true
-                DisplayMode: =Parent.DisplayMode
+                DisplayMode: =DisplayMode.View
                 MaxLength: =Parent.MaxLength
                 PaddingLeft: =5
                 RadiusBottomLeft: =0
@@ -266,9 +267,10 @@
 
             DataCardValue4 As text:
                 BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
-                Default: =Parent.Default
+                Default: |-
+                    =Text('Compare List Gallery'.Selected.Price,"$##,###.00")
                 DelayOutput: =true
-                DisplayMode: =Parent.DisplayMode
+                DisplayMode: =DisplayMode.View
                 Format: =TextFormat.Number
                 PaddingLeft: =5
                 RadiusBottomLeft: =0
@@ -310,7 +312,7 @@
             BorderStyle: =BorderStyle.Solid
             DataField: ="cr8aa_requestedby"
             Default: =ThisItem.'Requested By'
-            DisplayMode: =Parent.DisplayMode
+            DisplayMode: =DisplayMode.View
             DisplayName: =DataSourceInfo([@'Device Orders'],DataSourceInfo.DisplayName,"cr8aa_requestedby")
             Fill: =RGBA(0, 0, 0, 0)
             Height: =50
@@ -582,9 +584,9 @@
 
             DataCardValue1 As text:
                 BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
-                Default: =Parent.Default
+                Default: ='Compare List Gallery'.Selected.ManufacturerName & " - " & 'Compare List Gallery'.Selected.'Device Name'
                 DelayOutput: =true
-                DisplayMode: =Parent.DisplayMode
+                DisplayMode: =DisplayMode.View
                 MaxLength: =Parent.MaxLength
                 PaddingLeft: =5
                 RadiusBottomLeft: =0

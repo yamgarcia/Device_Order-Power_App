@@ -69,9 +69,11 @@
   },
   "FunctionParamsInvariantScripts": {},
   "FunctionParamsInvariantScriptsOnInstances": {},
-  "HeaderLastSavedDateTimeUTC": "07/22/2022 04:12:45",
+  "HeaderLastSavedDateTimeUTC": "07/22/2022 04:43:20",
   "IsLegacyComponentAllowGlobalScopeCase": false,
-  "LocalConnectionIDReferences": {},
+  "LocalConnectionIDReferences": {
+    "34ba7a63-0d5d-4cd4-9fe0-544c481f770e": "\"/providers/microsoft.powerapps/apis/shared_office365users/connections/cdb0998d1c4947dda8120981c954c50c\""
+  },
   "LocalDatabaseReferencesAsEmpty": false,
   "LocalResourceFileNames": {},
   "LocalResourceRootPaths": {},
@@ -79,16 +81,17 @@
   "OrderComponentMetadata": {},
   "OrderComponentTemplate": {},
   "OrderDataSource": {
-    "CompareList": 9,
-    "CustomGallerySample": 4,
-    "Device Orders": 7,
-    "Device Orders\\cr8aa_devicename_cr8aa_approvalstatus": 0,
-    "Device Orders\\cr8aa_devicename_statecode": 1,
-    "Device Orders\\cr8aa_devicename_statuscode": 2,
-    "Device Orders\\default.cds_cr8aa_devicename_views": 3,
-    "Devices": 5,
-    "DropDownSample": 8,
-    "Manufacturers": 6
+    "CompareList": 10,
+    "CustomGallerySample": 5,
+    "Device Orders": 8,
+    "Device Orders\\cr8aa_devicename_cr8aa_approvalstatus": 1,
+    "Device Orders\\cr8aa_devicename_statecode": 2,
+    "Device Orders\\cr8aa_devicename_statuscode": 3,
+    "Device Orders\\default.cds_cr8aa_devicename_views": 4,
+    "Devices": 6,
+    "DropDownSample": 9,
+    "Manufacturers": 7,
+    "Office365Users": 0
   },
   "OrderGroupControls": {
     "Group1": {
