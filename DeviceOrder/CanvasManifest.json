@@ -102,6 +102,7 @@
   },
   "ScreenOrder": [
     "Main Screen",
-    "Compare Screen"
+    "Compare Screen",
+    "SubmitSuccessScreen"
   ]
 }

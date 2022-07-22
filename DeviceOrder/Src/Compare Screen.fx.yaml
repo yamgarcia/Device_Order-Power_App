@@ -166,7 +166,9 @@
 
     Form1 As form:
         DataSource: ='Device Orders'
+        Height: =707
         NumberOfColumns: =1
+        OnSuccess: =Navigate('SubmitSuccessScreen', ScreenTransition.None)
         Width: =670
         X: =696
         Y: =61
@@ -336,7 +338,7 @@
 
             DataCardValue5 As text:
                 BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
-                Default: =Parent.Default
+                Default: =User().Email
                 DelayOutput: =true
                 DisplayMode: =Parent.DisplayMode
                 MaxLength: =Parent.MaxLength
@@ -386,6 +388,7 @@
             Height: =50
             Required: =false
             Update: =DateValue1.SelectedDate + Time(Value(HourValue1.Selected.Value), Value(MinuteValue1.Selected.Value), 0)
+            Visible: =false
             Width: =670
             X: =0
             Y: =4
@@ -403,7 +406,6 @@
 
             DateValue1 As datepicker:
                 BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
-                DefaultDate: =Parent.Default
                 DisplayMode: =Parent.DisplayMode
                 EndYear: =Year(Today())+100
                 IsEditable: =true
@@ -496,7 +498,7 @@
             DisplayMode: =Parent.DisplayMode
             DisplayName: =DataSourceInfo([@'Device Orders'],DataSourceInfo.DisplayName,"cr8aa_comments")
             Fill: =RGBA(0, 0, 0, 0)
-            Height: =79
+            Height: =186
             Required: =false
             Update: =DataCardValue6.Text
             Width: =670
@@ -519,6 +521,8 @@
                 Default: =Parent.Default
                 DelayOutput: =true
                 DisplayMode: =Parent.DisplayMode
+                Height: =115
+                HintText: ="“Enter justification.”"
                 Mode: =TextMode.MultiLine
                 PaddingLeft: =5
                 RadiusBottomLeft: =0
@@ -563,7 +567,7 @@
             DisplayMode: =Parent.DisplayMode
             DisplayName: =DataSourceInfo([@'Device Orders'],DataSourceInfo.DisplayName,"cr8aa_devicename")
             Fill: =RGBA(0, 0, 0, 0)
-            Height: =50
+            Height: =55
             MaxLength: =DataSourceInfo([@'Device Orders'], DataSourceInfo.MaxLength, "cr8aa_devicename")
             Required: =true
             Update: =DataCardValue1.Text
@@ -623,4 +627,14 @@
                 Wrap: =false
                 Y: =DataCardKey1.Y
                 ZIndex: =4
+
+    SubmitButton As button:
+        DisplayMode: =If(!IsBlank('Compare List Gallery'.Selected), DisplayMode.Edit, DisplayMode.Disabled)
+        Height: =44
+        OnSelect: =SubmitForm(Form1)
+        Text: ="Submit device request"
+        Width: =235
+        X: =1120
+        Y: =712
+        ZIndex: =6
 
